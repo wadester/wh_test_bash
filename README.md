@@ -11,10 +11,14 @@ This project may be public, but it does not yet serve any specific purpose.
 It may in the future....  At this point it includes a bunch of sample 
 Shell scripts, some based on Shell examples and stackoverflow....
 
+Note to edit with Emacs, "esc-x-shell-mode" to get shell mode!
+
 History:
 ========
 
 1) 0.1   10/23/2015  created
+
+2) 0.2   10/25/2015  links added
 
 Notes:
 ======
@@ -30,3 +34,17 @@ Notes:
 
 5)  After running the scripts, run cleanup.sh to remove test files.
 
+Links:
+======
+
+1) Bash Reference Manual:  
+
+   https://www.gnu.org/software/bash/manual/bash.html
+
+2) LDP Advanced Bash-Scripting Guide: 
+
+   http://www.tldp.org/LDP/abs/html/index.html
+
+2) LDP Bash Guide for Beginners:  
+
+   http://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html
