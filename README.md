@@ -30,7 +30,7 @@ Notes:
 
 3)  License for ALL files is GPL, see LICENSE.
 
-4)  Please e-mail me with any updates, suggesions, etc.  
+4)  Please e-mail me with any updates, suggestions, etc.  
 
 5)  After running the scripts, run cleanup.sh to remove test files.
 
@@ -48,3 +48,4 @@ Links:
 2) LDP Bash Guide for Beginners:  
 
    http://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html
+
