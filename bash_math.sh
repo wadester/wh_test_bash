@@ -3,8 +3,10 @@
 # Purpose:  sample math in Bash using multiple means
 # Date:     10/23/2015
 # Notes:
-# 1) Ref:
-#    http://faculty.salina.k-state.edu/tim/unix_sg/bash/math.html
+# 1) Ref:  http://faculty.salina.k-state.edu/tim/unix_sg/bash/math.html
+# 2) The older style is required on busybox's shell at this time
+#    i.e., if [ $ii -lt 10 ]; then  versus  if ((ii<10)); then
+#
 echo "bash_math.sh:  basic bash math using multiple means"
 
 echo "Basic integer math:"
@@ -56,6 +58,7 @@ else
 fi
 
 echo "Old way using -lt, -gt, etc."
+echo " -- this is needed for busybox's shell (busybox sh)"
 echo -n "if [ \$A -lt \$B ]; then  result-> "
 if [ $A -lt $B ]; then
   echo "A < B"
