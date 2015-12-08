@@ -1,16 +1,17 @@
 #!/bin/bash
 # Module:   bash_loops.sh
 # Purpose:  multiple ways of doing loops in bash
-# Date:     10/23/2015
+# Date:     N/A
 # Notes:
 # 1)  http://stackoverflow.com/questions/918886/how-do-i-split-a-string-on-a-delimiter-in-bash
 #     http://stackoverflow.com/questions/1469849/how-to-split-one-string-into-multiple-strings-separated-by-at-least-one-space-in
+#     http://www.cyberciti.biz/faq/bash-for-loop/
 
-# 2)  Most of this will not work on busybox's shell
+# 2)  Most of this will NOT work on busybox's shell
 #
 echo "bash_loops.sh - loops in the BASH shell"
 
-echo "Simple loop over list of items"
+echo "Simple loop over list of items (works w/ busybox)"
 X="1 2 3 4"
 i=0
 for x in $X
@@ -19,6 +20,41 @@ do
     ((i++))
 done
 echo
+
+echo "Simple loop with values supplied (1 1 2 3 5 8 13) (works w/ busybox)"
+i=0 
+for x in 1 1 2 3 5 8 13
+do
+    echo "  $i \$x=$x"
+    ((i++))
+done
+
+echo "Simple loop with values supplied by {1..3} (not w/ busybox)"
+i=0 
+for x in {1..3}
+do
+    echo "  $i \$x=$x"
+    ((i++))
+done
+
+echo "Simple loop using seq 1 2 4 (works w/ busybox)"
+# -- busybox test:  
+#    for x in $(seq 1 2 4); do echo "x=$x"; done
+i=0 
+for x in $(seq 1 2 4)
+do
+    echo "  $i \$x=$x"
+    ((i++))
+done
+
+echo "Simple FOR loop (not w/ busybox)"
+i=0 
+for (( x=1; x<=5; x++ ))
+do
+   echo "  $i \$x=$x"
+   ((i++)) 
+done
+
 
 #arr=(${X// / })
 
@@ -41,7 +77,7 @@ do
 done
 
 echo
-echo "Loop over n strings in \$things=\"one two\""
+echo "Loop over n strings in \$things=\"one two\" (works w/ busybox)"
 things="one two"
 for one_thing in $things; do
     echo " " $one_thing
@@ -62,6 +98,7 @@ done
 
 echo "Example of inf loop using while [ 1 ]"
 echo "  - uses counter \$ii=1 and \"break\" when ii>5"
+echo "  - does not work w/ busybox"
 ii=1
 while [ 1 ]; do
     printf "%03d Message...\n" $ii
