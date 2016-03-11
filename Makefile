@@ -5,10 +5,14 @@
 # Date:     10/23/2015
 #
 all::
-	echo "Nothing to do for all"
+	$(MAKE) README
+
+README::
+	asciidoc -o README.html README.md
 
 clean::
 	./cleanup.sh
+
 cleanup::
 	./cleanup.sh
 
