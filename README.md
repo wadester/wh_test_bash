@@ -23,7 +23,7 @@ History:
 
   0.3  03/11/2016  updated, now in AsciiDoc
 
-  0.   04/06/2016  update to readme
+  0.4  04/06/2016  update to readme
 
 Notes:
 ------
