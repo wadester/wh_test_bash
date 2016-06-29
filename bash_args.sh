@@ -8,7 +8,11 @@
 
 echo "bash_args.sh:  Bash args and special chars"
 
-echo "Pass some args on the command line, they will be echoed here:"
+if [ $# -eq 0 ]
+then
+    echo "This works better with some args passed here"
+    echo "Usage:  ./bash_args.sh arg1 arg2 a b c d etc. "
+fi
 
 echo "Script name is \$0:  $0"
 
@@ -20,14 +24,17 @@ echo "First arg=${args[0]}"
 i=0
 for x in "${args[@]}"; do
     echo "ARG[$i] = $x"
+    ((i++))
 done
 bash -c 'echo $$ $# $0 $1 $2' arg1 arg2 arg3
 
 echo "Using the index to args:"
 i=0
+j=0
 while ((i < $#)); do
-    echo "ARG[$i] = $1"
+    echo "ARG[$j] = $1"
     shift 1
+    ((j++))
 done
 
 # $* is positional parms

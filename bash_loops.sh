@@ -40,11 +40,18 @@ done
 echo "Simple loop using seq 1 2 4 (works w/ busybox)"
 # -- busybox test:  
 #    for x in $(seq 1 2 4); do echo "x=$x"; done
+# seq LAST -> 1..LAST; seq FIRST LAST; seq FIRST INC LAST
 i=0 
 for x in $(seq 1 2 4)
 do
     echo "  $i \$x=$x"
     ((i++))
+done
+
+echo "seq with floating format, see man seq"
+for x in $(seq --format="%010.2f" 10)
+do
+    echo "X=$x"
 done
 
 echo "Simple FOR loop (not w/ busybox)"
@@ -109,7 +116,15 @@ while [ 1 ]; do
     # sleep for N seconds, float value accepted
     sleep .3
 done
+LIMIT=10
 
+echo "C-style loop:  for ((a=1; a <= LIMIT ; a++))"
+LIMIT=10
+for ((a=1; a <= LIMIT ; a++))
+do
+  echo -n "$a "
+done
+echo
 
 echo "Done!"
 
