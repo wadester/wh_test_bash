@@ -1,13 +1,15 @@
 WH Test Bash Repository -- Bash test files
 ==========================================
 Wade Hampton <wadehamptoniv@gmail.com>
-0.4, 4/6/2016: Update to readme
+0.5, 7/13/2016: Updated to include some busybox options
 
 Summary:
 --------
 
-This repository contains multiple, sample Bash scripts.  These are 
-simple scripts that may be used as examples for writing Bash/Shell programs.  
+This repository contains multiple, sample shell scripts.  These are 
+simple scripts that may be used as examples for writing Bash/Busybox
+Shell programs.  
+
 This project may be public, but it does not yet serve any specific purpose.  
 It may in the future....  At this point it includes a bunch of sample 
 Shell scripts, some based on Shell examples and stackoverflow....
@@ -25,6 +27,8 @@ History:
 
   0.4  04/06/2016  update to readme
 
+  0.5  07/13/2016  Updated to include some busybox options
+
 Notes:
 ------
 
@@ -39,6 +43,8 @@ Notes:
 4.  Please e-mail me with any updates, suggestions, etc.  
 
 5.  After running the scripts, run cleanup.sh to remove test files.
+
+6.  This has been expanded to include a few busybox-compatible scripts.
 
 Links:
 ------
