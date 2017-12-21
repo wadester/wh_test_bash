@@ -1,7 +1,7 @@
 WH Test Bash Repository -- Bash test files
 ==========================================
 Wade Hampton <wadehamptoniv@gmail.com>
-0.5, 7/13/2016: Updated to include some busybox options
+0.6, 12/21/2017: File loop example added
 
 Summary:
 --------
@@ -28,6 +28,8 @@ History:
   0.4  04/06/2016  update to readme
 
   0.5  07/13/2016  Updated to include some busybox options
+
+  0.6  12/21/2017  File loop example added
 
 Notes:
 ------

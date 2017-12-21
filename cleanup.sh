@@ -7,6 +7,8 @@
 #
 
 rm -f *.log *.tmp
+rm -f *.xxx
+rm -f *.yyy
 rm -f README.html
 
 
